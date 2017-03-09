@@ -29,7 +29,7 @@ const env = process.env.NODE_ENV || 'development'
 const isProd = env === 'production'
 const srcDir = 'client'
 const distDir = 'public'
-const reactDir = 'app'
+const reactDir = srcDir + '/app'
 
 gutil.log(gutil.colors.yellow('[Env]'), gutil.colors.blue(env))
 
@@ -73,7 +73,7 @@ gulp.task('assets', () => {
 
 gulp.task('jsx', (done) => {
   let options = browserify({
-    entries: srcDir + '/' + reactDir + '/index.jsx',
+    entries: reactDir + '/index.jsx',
     extensions: ['.jsx', '.js'],
     debug: true,
   })
@@ -91,7 +91,7 @@ gulp.task('jsx', (done) => {
 })
 
 gulp.task('sass', () => {
-  return gulp.src(srcDir + '/' + reactDir + '/styles/app.scss')
+  return gulp.src(reactDir + '/styles/app.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(rename('bundle.css'))
     .pipe(gulpif(isProd, rename({
@@ -113,7 +113,7 @@ gulp.task('postcss', (done) => {
   if (isProd) {
     processors.push(cssnano())
   }
-  return gulp.src(srcDir + '/' + reactDir + '/styles/app.css')
+  return gulp.src(reactDir + '/styles/app.css')
     .pipe(rename('bundle.css'))
     .pipe(sourcemaps.init())
     .pipe(postcss(processors))

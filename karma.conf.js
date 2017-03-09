@@ -16,7 +16,7 @@ module.exports = function (config) {
     // list of files / patterns to load in the browser
     files: [
       'node_modules/babel-polyfill/dist/polyfill.js',
-      'client/**/*.test.js'
+      'client/app/**/*.test.js'
     ],
 
 
@@ -26,15 +26,15 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'client/**/*.test.js': ['browserify'],
-      'client/**/*.jsx': ['browserify'],
-      'client/**/*.js': ['browserify'],
+      'client/app/**/*.test.js': ['browserify'],
+      'client/app/**/*.jsx': ['browserify'],
+      'client/app/**/*.js': ['browserify'],
     },
 
     browserify: {
       debug: true,
       transform: ['babelify'],
-      paths: ['./node_modules', './client']
+      paths: ['./node_modules', './client/app']
     },
 
     // test results reporter to use
