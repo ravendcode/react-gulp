@@ -58,8 +58,8 @@ gulp.task('clean', () => {
 
 gulp.task('html', () => {
   return gulp.src(srcDir + '/index.html')
-    .pipe(connect.reload())
     .pipe(gulp.dest(distDir))
+    .pipe(connect.reload())
 })
 
 gulp.task('assets', () => {
@@ -67,8 +67,8 @@ gulp.task('assets', () => {
     .pipe(imagemin({
       progressive: true
     }))
-    .pipe(connect.reload())
     .pipe(gulp.dest(distDir + '/assets'))
+    .pipe(connect.reload())
 })
 
 gulp.task('jsx', (done) => {
@@ -86,8 +86,8 @@ gulp.task('jsx', (done) => {
       suffix: '.min'
     })))
     // .pipe(gulpif(isProd, uglify().on('error', error(done))))
-    .pipe(connect.reload())
     .pipe(gulp.dest(distDir + '/scripts'))
+    .pipe(connect.reload())
 })
 
 gulp.task('sass', () => {
@@ -98,8 +98,8 @@ gulp.task('sass', () => {
       suffix: '.min'
     })))
     .pipe(gulpif(isProd, minifyCSS()))
-    .pipe(connect.reload())
     .pipe(gulp.dest(distDir + '/styles'))
+    .pipe(connect.reload())
 })
 
 gulp.task('postcss', (done) => {
@@ -122,8 +122,8 @@ gulp.task('postcss', (done) => {
       suffix: '.min'
     })))
     .pipe(sourcemaps.write())
-    .pipe(connect.reload())
     .pipe(gulp.dest(distDir + '/styles'))
+    .pipe(connect.reload())
 })
 
 gulp.task('html-minify', () => {

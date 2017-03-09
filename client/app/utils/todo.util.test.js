@@ -2,7 +2,7 @@
 import expect from 'expect'
 import { addTodo, findById, toggleTodo, updateTodo } from './todo.util'
 
-describe('client/app/utils/todo.util.js', () => {
+describe(__filename, () => {
   describe('#addTodo()', () => {
     it('should add todo to the list', () => {
       let todos = [

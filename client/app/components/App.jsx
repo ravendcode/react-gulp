@@ -14,7 +14,7 @@ export default class App extends React.Component {
         <div className="App-header">
           <img src="/assets/images/logo.svg" alt="App logo" className="App-logo" />
           <img src="/assets/images/gulp.svg" alt="App logo" className="App-logo-gulp" />
-          <h2>React Gulp</h2>
+          <h2><span className="react">React</span> <span className="gulp">Gulp</span></h2>
         </div>
         <Nav />
         {this.props.children || <Home />}
