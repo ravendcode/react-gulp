@@ -1,8 +1,7 @@
-import 'babel-polyfill'
+// import 'babel-polyfill'
 import expect from 'expect'
 import { addTodo, findById, toggleTodo, updateTodo } from './todo.util'
 
-console.log(addTodo)
 describe('client/app/utils/todo.util.js', () => {
   describe('#addTodo()', () => {
     it('should add todo to the list', () => {
