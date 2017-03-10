@@ -20,4 +20,4 @@
 8. `npm run dev` - https://localhost:3000 frontend and https://localhost backend
 9. `npm run prod` - minify frontend files
 10. `npm start` - https://localhost start in production for heroku
-11. `gulp clean` - clean dist
+11. `gulp clean` - cleaning the client directory
