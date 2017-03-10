@@ -144,9 +144,9 @@ gulp.task('html-minify', () => {
 gulp.task('watch', ['html', 'assets', 'sass', 'jsx'], () => {
   gulp.watch(srcDir + '/index.html', ['html'])
   gulp.watch(srcDir + '/assets/**/*', ['assets'])
-  gulp.watch(srcDir + '/**/*.scss', ['sass'])
-  // gulp.watch(srcDir + '/**/*.css', ['postcss'])
-  gulp.watch(srcDir + '/**/*.jsx', ['jsx'])
+  gulp.watch(reactDir + '/styles/**/*.scss', ['sass'])
+  // gulp.watch(reactDir + '/styles/**/*.css', ['postcss'])
+  gulp.watch(reactDir + '/**/*.jsx', ['jsx'])
 })
 
 if (isProd) {
