@@ -10,7 +10,7 @@
     "client-dev": "gulp",
     "server-dev": "export DEBUG=app:* || set DEBUG=app:* && nodemon ./server/bin/www -e js,hbs --watch ./server",
     "clean": "gulp clean",
-    "test": "export NODE_ENV=test || set NODE_ENV=test&& nodemon --exec mocha client/**/*.test.js --compilers js:babel-core/register"
+    "test": "export NODE_ENV=test || set NODE_ENV=test&& nodemon --exec mocha client/app/**/*.test.js --compilers js:babel-core/register"
   },
   "keywords": [],
   "author": "ravend",
@@ -22,6 +22,7 @@
     "babelify": "^7.3.0",
     "browserify": "^14.1.0",
     "concurrently": "^3.4.0",
+    "cors": "^2.8.1",
     "cssnano": "^3.10.0",
     "del": "^2.2.2",
     "eslint": "^3.16.0",
@@ -56,8 +57,7 @@
     "precss": "^1.4.0",
     "through2": "^2.0.3",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.9.0"
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "babel-cli": "^6.23.0",

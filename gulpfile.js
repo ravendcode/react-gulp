@@ -74,7 +74,7 @@ gulp.task('assets', () => {
 gulp.task('jsx', (done) => {
   let options = browserify({
     entries: reactDir + '/index.jsx',
-    extensions: ['.jsx', '.js'],
+    extensions: ['.js', '.jsx'],
     debug: true,
   })
   return options.transform(babelify)

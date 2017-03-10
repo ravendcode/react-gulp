@@ -39,6 +39,24 @@
   text-align: left; }
   .Todo .error {
     color: red; }
+  .Todo .success {
+    color: green; }
+  .Todo li span.delete-item {
+    visibility: hidden; }
+  .Todo span.delete-item a {
+    text-decoration: none;
+    color: red; }
+  .Todo li:hover span.delete-item {
+    visibility: visible; }
+  .Todo input[type="checkbox"] {
+    position: relative;
+    top: 2px; }
+  .Todo .TodoFooter a {
+    padding-left: 2px;
+    padding-right: 2px; }
+  .Todo .active {
+    font-weight: bold;
+    color: #00D8FF; }
 
 input {
   font-size: 20px; }

@@ -8,6 +8,7 @@ import cookieParser from 'cookie-parser'
 import i18n from 'i18n'
 import favicon from 'serve-favicon'
 import compression from 'compression'
+import cors from 'cors'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { match, RouterContext } from 'react-router'
@@ -19,6 +20,7 @@ import routes from './routes'
 const app = express()
 
 app.use(compression())
+app.use(cors())
 
 if (config.env === 'development') {
   app.use(morgan('dev'))

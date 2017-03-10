@@ -1,6 +1,6 @@
 // import 'babel-polyfill'
 import expect from 'expect'
-import { addTodo, findById, toggleTodo, updateTodo } from './todo.util'
+import { addTodo, findById, toggleTodo, updateTodo, removeTodo } from './todo.util'
 
 describe(__filename, () => {
   describe('#addTodo()', () => {
@@ -47,6 +47,20 @@ describe(__filename, () => {
       let todo = {id: 2, name: 'three', isComplete: false}
 
       expect(updateTodo(todos, todo)).toInclude(todo)
+    })
+  })
+
+  describe('#removeTodo()', () => {
+    it('should remove todo', () => {
+      let todos = [
+        {id: 1, name: 'one', isComplete: false},
+        {id: 2, name: 'two', isComplete: false},
+      ]
+      let todo = {id: 2, name: 'three', isComplete: false}
+      let result = removeTodo(todos, todo.id)
+
+      expect(result.length).toBe(1)
+      expect(result[0]).toBe(todos[0])
     })
   })
 })

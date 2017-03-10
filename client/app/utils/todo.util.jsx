@@ -11,3 +11,20 @@ export const updateTodo = (list, updated) => {
   list[updatedIndex] = updated
   return list
 }
+
+export const removeTodo = (list, id) => {
+  let removeIndex = list.findIndex(item => item.id === id)
+  list.splice(removeIndex, 1)
+  return list
+}
+
+export const filterTodos = (list, filter) => {
+  switch (filter) {
+    case 'active':
+      return list.filter(item => !item.isComplete)
+    case 'complete':
+      return list.filter(item => item.isComplete)
+    default:
+      return list
+  }
+}
