@@ -1,3 +1,4 @@
+console.log('lol')
 const baseUrl = 'https://ravend-react-gulp.herokuapp.com:443/api/todos'
 const headers = {
   'Accept': 'application/json',
