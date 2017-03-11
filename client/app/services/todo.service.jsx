@@ -1,4 +1,4 @@
-const baseUrl = 'https://localhost/api/todos'
+const baseUrl = '//localhost/api/todos'
 const headers = {
   'Accept': 'application/json',
   'Content-Type': 'application/json'
