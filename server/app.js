@@ -1,7 +1,7 @@
 import path from 'path'
 import fs from 'fs'
+// import http from 'http'
 import express from 'express'
-import http from 'http'
 import morgan from 'morgan'
 import bodyParser from 'body-parser'
 import cookieParser from 'cookie-parser'
@@ -25,14 +25,14 @@ app.use(cors())
 if (config.env === 'development') {
   app.use(morgan('dev'))
 
-  app.all('*', function (req, res, next) {
-    if (req.secure) {
-      return next()
-    }
-    res.redirect('https://' + req.hostname + ':' + config.httpsPort + req.url)
-  })
-  http.createServer(app).listen(config.httpPort)
-  // redirect http server
+  // // redirect http server
+  // app.all('*', function (req, res, next) {
+  //   if (req.secure) {
+  //     return next()
+  //   }
+  //   res.redirect('https://' + req.hostname + ':' + config.httpsPort + req.url)
+  // })
+  // http.createServer(app).listen(config.httpPort)
 }
 
 i18n.configure({

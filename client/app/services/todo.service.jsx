@@ -1,15 +1,16 @@
-const baseUrl = 'https://ravend-react-gulp.herokuapp.com/api/todos'
+import { baseUrl } from '../config'
+const todosApi = baseUrl + '/api/todos'
 const headers = {
   'Accept': 'application/json',
   'Content-Type': 'application/json'
 }
 
 export const loadTodos = () => {
-  return fetch(baseUrl).then(res => res.json())
+  return fetch(todosApi).then(res => res.json())
 }
 
 export const createTodo = (todo) => {
-  return fetch(baseUrl, {
+  return fetch(todosApi, {
     headers,
     method: 'POST',
     body: JSON.stringify(todo)
@@ -17,7 +18,7 @@ export const createTodo = (todo) => {
 }
 
 export const saveTodo = (todo) => {
-  return fetch(`${baseUrl}/${todo.id}`, {
+  return fetch(`${todosApi}/${todo.id}`, {
     headers,
     method: 'PATCH',
     body: JSON.stringify(todo)
@@ -25,7 +26,7 @@ export const saveTodo = (todo) => {
 }
 
 export const destroyTodo = (id) => {
-  return fetch(`${baseUrl}/${id}`, {
+  return fetch(`${todosApi}/${id}`, {
     headers,
     method: 'DELETE'
   })

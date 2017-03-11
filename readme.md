@@ -7,17 +7,17 @@
 4. React
 5. SASS
 6. PostCSS
-7. Heroku
+7. Tests
+8. Heroku
 
 ### Usage
 1. Edit server/config.js
-2. `openssl genrsa 1024 > server/ssl/private.key`
-3. `openssl req -new -key server/ssl/private.key -out server/ssl/cert.csr`
-4. `openssl x509 -req -in server/ssl/cert.csr -signkey server/ssl/private.key -out server/ssl/certificate.pem`
-5. `npm i`
-6. `npm i gulp-cli -g`
-7. `gulp` https://localhost:3000 development only frontend
-8. `npm run dev` - https://localhost:3000 frontend and https://localhost backend
-9. `npm run prod` - minify frontend files
-10. `npm start` - https://localhost start in production for heroku
-11. `gulp clean` - cleaning the client directory
+2. Edit client/config.jsx
+3. `npm i`
+4. `npm i gulp-cli -g`
+5. `gulp` http://localhost:3000 development only frontend
+6. `npm run dev` - http://localhost:3000 frontend and http://localhost backend
+7. `npm run prod` - minify frontend files
+8. `npm start` - http://localhost start in production for heroku
+9. `karma start` or `npm test` client test
+9. `gulp clean` - cleaning the client directory

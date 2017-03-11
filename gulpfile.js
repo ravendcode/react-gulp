@@ -45,7 +45,7 @@ function error(done) {
 gulp.task('connect', function () {
   connect.server({
     port: 3000,
-    https: true,
+    // https: true,
     root: distDir,
     livereload: true,
     fallback: path.join(__dirname, distDir + '/index.html')
@@ -75,7 +75,7 @@ gulp.task('jsx', (done) => {
   let options = browserify({
     entries: reactDir + '/index.jsx',
     extensions: ['.js', '.jsx'],
-    debug: true,
+    debug: !isProd,
   })
   return options.transform(babelify)
     .bundle()

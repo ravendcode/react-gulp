@@ -1,5 +1,5 @@
 import path from 'path'
-import fs from 'fs'
+// import fs from 'fs'
 import {
   normalizePort
 } from './utils'
@@ -11,12 +11,12 @@ const httpsPort = 443
 const publicDir = path.join(__dirname, '../public')
 
 let httpsOptions
-if (env === 'development') {
-  httpsOptions = {
-    key: fs.readFileSync(path.join(__dirname, 'ssl/private.key')),
-    cert: fs.readFileSync(path.join(__dirname, 'ssl/certificate.pem'))
-  }
-}
+// if (env === 'development') {
+//   httpsOptions = {
+//     key: fs.readFileSync(path.join(__dirname, 'ssl/private.key')),
+//     cert: fs.readFileSync(path.join(__dirname, 'ssl/certificate.pem'))
+//   }
+// }
 
 let mongoDbName = process.env.MONGODB_NAME || 'startexpress'
 
