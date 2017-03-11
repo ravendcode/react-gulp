@@ -20,4 +20,4 @@
 7. `npm run prod` - minify frontend files
 8. `npm start` - http://localhost start in production for heroku
 9. `karma start` or `npm test` client test
-9. `gulp clean` - cleaning the client directory
+9. `gulp clean` - cleaning the public directory
