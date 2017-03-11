@@ -58,6 +58,6 @@ function onListening() {
   debug(`env is ${config.env}`)
   var addr = server.address()
   var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port
-  debug('http redirect server listening on ' + config.httpPort)
-  debug('https server listening on ' + bind)
+  // debug('http redirect server listening on ' + config.httpPort)
+  debug('http server listening on ' + bind)
 }
