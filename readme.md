@@ -1,4 +1,5 @@
 # React Gulp
+## Deprecated! The Best way use https://github.com/ravendcode/react-go-gulp
 
 ### Features
 1. ES6
